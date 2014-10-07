@@ -13,6 +13,11 @@ namespace FirstMVC.Controllers
             return View();
         }
 
+        public ViewResult ConfirmForm()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
