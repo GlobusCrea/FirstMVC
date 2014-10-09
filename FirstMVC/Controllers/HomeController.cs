@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FirstMVC.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,23 +14,23 @@ namespace FirstMVC.Controllers
             return View();
         }
 
+        [HttpGet]
         public ViewResult ConfirmForm()
         {
             return View();
         }
 
-        public ActionResult About()
+        [HttpPost]
+        public ViewResult ConfirmForm(GuestResponse guestResponse)
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            if(ModelState.IsValid)
+            {
+                return View("Merci", guestResponse);
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }

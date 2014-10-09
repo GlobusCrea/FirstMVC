@@ -21,8 +21,12 @@
         {
             new SelectListItem() {Text = "Oui, Je serai présent", Value = bool.TrueString},
             new SelectListItem() {Text = "Non, je ne serai pas présent", Value = bool.TrueString},
-        },"-")
+        },"Je ne sais pas")
     </p>
     <input type="submit" value="Valider" />
+    <br />
+    <div>
+        @Html.ValidationSummary()
+    </div>
 }
 

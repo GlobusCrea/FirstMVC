@@ -1,0 +1,18 @@
+﻿<!--Spécifie le modele (la classe) que l'on utilise-->
+@model FirstMVC.Models.GuestResponse
+
+@{
+    ViewBag.Title = "Merci";
+}
+
+<h2>Merci</h2>
+
+@if(Model.presence == true)
+{
+    @:Super @Model.Prenom! L'orgie peut commencer!!!
+}
+else
+{
+    @:Dommage @Model.Prenom! Merci d'avoir répondu
+}
+
